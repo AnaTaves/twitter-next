@@ -12,7 +12,6 @@ interface Props {
 }
 
 const Home: NextPage = ({ tweets }: Props) => {
-  console.log(tweets)
   return (
     <div className="mx-auto lg:max-w-6xl max-h-screen overflow-hidden">
       <Head>
@@ -23,7 +22,7 @@ const Home: NextPage = ({ tweets }: Props) => {
      
      <main className="grid grid-cols-9">
        <Sidebar/>
-       <Feed/>
+       <Feed tweets={tweets}/>
        <Widgets/>
      </main>
     </div>
